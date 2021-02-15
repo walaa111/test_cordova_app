@@ -24,6 +24,14 @@ module.exports = [
     "clobbers": [
       "cordova.InAppBrowser.open"
     ]
+  },
+  {
+    "id": "cordova-plugin-firebase.FirebasePlugin",
+    "file": "plugins/cordova-plugin-firebase/www/firebase.js",
+    "pluginId": "cordova-plugin-firebase",
+    "clobbers": [
+      "FirebasePlugin"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -34,7 +42,8 @@ module.exports.metadata =
   "cordova-play-services-version-adapter": "1.0.2",
   "cordova-admob": "5.1.0",
   "cordova-plugin-inappbrowser": "4.1.0",
-  "cordova-plugin-androidx": "3.0.0"
+  "cordova-plugin-androidx": "3.0.0",
+  "cordova-plugin-firebase": "2.0.5"
 };
 // BOTTOM OF METADATA
 });

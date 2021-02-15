@@ -18,6 +18,9 @@
     },
     "cordova-plugin-androidx": {
       "PACKAGE_NAME": "com.realdealagency.newcordova"
+    },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "com.realdealagency.newcordova"
     }
   },
   "dependent_plugins": {
