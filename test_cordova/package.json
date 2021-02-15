@@ -19,7 +19,8 @@
     "plugins": {
       "cordova-plugin-whitelist": {},
       "cordova-admob": {},
-      "cordova-plugin-inappbrowser": {}
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-firebase-lib": {}
     },
     "platforms": [
       "android"
@@ -30,6 +31,7 @@
     "cordova-android": "^7.1.4",
     "cordova-connectivity-monitor": "^1.2.2",
     "cordova-play-services-version-adapter": "^1.1.0",
+    "cordova-plugin-firebase-lib": "4.1.0",
     "cordova-plugin-inappbrowser": "^4.1.0"
   }
 }
