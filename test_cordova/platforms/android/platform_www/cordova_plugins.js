@@ -43,7 +43,8 @@ module.exports.metadata =
   "cordova-admob": "5.1.0",
   "cordova-plugin-inappbrowser": "4.1.0",
   "cordova-plugin-androidx": "3.0.0",
-  "cordova-plugin-firebase": "2.0.5"
+  "cordova-plugin-firebase": "2.0.5",
+  "cordova-android-play-services-gradle-release": "4.0.0"
 };
 // BOTTOM OF METADATA
 });
