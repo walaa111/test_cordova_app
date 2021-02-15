@@ -16,6 +16,14 @@ module.exports = [
       "window.admob",
       "window.tappx"
     ]
+  },
+  {
+    "id": "cordova-plugin-inappbrowser.inappbrowser",
+    "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+    "pluginId": "cordova-plugin-inappbrowser",
+    "clobbers": [
+      "cordova.InAppBrowser.open"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -24,7 +32,8 @@ module.exports.metadata =
   "cordova-plugin-whitelist": "1.3.4",
   "cordova-connectivity-monitor": "1.2.2",
   "cordova-play-services-version-adapter": "1.0.2",
-  "cordova-admob": "5.1.0"
+  "cordova-admob": "5.1.0",
+  "cordova-plugin-inappbrowser": "4.1.0"
 };
 // BOTTOM OF METADATA
 });

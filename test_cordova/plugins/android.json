@@ -12,6 +12,9 @@
     },
     "cordova-admob": {
       "PACKAGE_NAME": "com.realdealagency.newcordova"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.realdealagency.newcordova"
     }
   },
   "dependent_plugins": {
