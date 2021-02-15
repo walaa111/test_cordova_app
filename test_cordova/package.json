@@ -1,19 +1,33 @@
 {
-  "dependencies": {
-    "onesignal-cordova-plugin": "2.11.3"
+  "name": "com.realdealagency.newcordova",
+  "displayName": "HelloCordova",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
   "devDependencies": {
-    "cordova-admob": "^5.1.0",
-    "cordova-android": "^9.0.0",
-    "cordova-plugin-firebase-lib": "^5.1.1",
-    "cordova-plugin-whitelist": "~1.3.4"
+    "cordova-plugin-whitelist": "^1.3.4"
   },
   "cordova": {
     "plugins": {
       "cordova-plugin-whitelist": {},
-      "cordova-admob": {},
-      "cordova-plugin-firebase-lib": {}
+      "cordova-admob": {}
     },
-    "platforms": []
+    "platforms": [
+      "android"
+    ]
+  },
+  "dependencies": {
+    "cordova-admob": "^5.1.0",
+    "cordova-android": "^7.1.4",
+    "cordova-connectivity-monitor": "^1.2.2",
+    "cordova-play-services-version-adapter": "^1.1.0"
   }
 }

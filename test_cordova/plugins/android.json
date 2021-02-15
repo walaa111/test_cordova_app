@@ -6,16 +6,20 @@
   "config_munge": {
     "files": {}
   },
-  "installed_plugins": {},
-  "dependent_plugins": {
-    "cordova-connectivity-monitor": {
-      "PACKAGE_NAME": "com.realdealagency.ebekalaa"
-    },
-    "cordova-play-services-version-adapter": {
-      "PACKAGE_NAME": "com.realdealagency.ebekalaa"
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.realdealagency.newcordova"
     },
     "cordova-admob": {
-      "PACKAGE_NAME": "com.realdealagency.ebekalaa"
+      "PACKAGE_NAME": "com.realdealagency.newcordova"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-connectivity-monitor": {
+      "PACKAGE_NAME": "com.realdealagency.newcordova"
+    },
+    "cordova-play-services-version-adapter": {
+      "PACKAGE_NAME": "com.realdealagency.newcordova"
     }
   }
 }
