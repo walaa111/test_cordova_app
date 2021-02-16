@@ -77,6 +77,11 @@
         "PLAY-SERVICES-VISION-IMAGE-LABEL": "18.0.0",
         "PLAY-SERVICES-WALLET": "17.0.0",
         "PLAY-SERVICES-WEARABLE": "17.0.0"
+      },
+      "phonegap-plugin-push": {
+        "SENDER_ID": "XXXXXXX",
+        "ANDROID_SUPPORT_V13_VERSION": "27.+",
+        "FCM_VERSION": "17.0.+"
       }
     },
     "platforms": [
@@ -95,6 +100,7 @@
     "cordova-plugin-firebase-lib": "4.1.0",
     "cordova-plugin-inappbrowser": "^4.1.0",
     "cordova-support-google-services": "^1.3.2",
-    "phonegap-plugin-multidex": "^1.0.0"
+    "phonegap-plugin-multidex": "^1.0.0",
+    "phonegap-plugin-push": "git+https://github.com/phonegap/phonegap-plugin-push.git"
   }
 }

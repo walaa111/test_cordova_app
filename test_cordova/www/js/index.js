@@ -93,7 +93,34 @@ inAppBrowserbRef.addEventListener('loadstart', function() {
      // admob.requestRewardedAd();
        //admob
 
+       var push = PushNotification.init({
+        android: {
+            senderID: "1031016695868"
+        },
+        ios: {
+            alert: "true",
+            badge: "true",
+            sound: "true"
+        },
+        windows: {}
+    });
 
+    push.on('registration', function(data) {
+        console.log("device token: " + data.registrationId);
+    });
+
+    push.on('notification', function(data) {
+           console.log(data.message);
+           console.log(data.title);
+           console.log(data.count);
+           console.log(data.sound);
+           console.log(data.image);
+           console.log(data.additionalData);
+    });
+
+    push.on('error', function(e) {
+           console.log(e.message)
+    });
 
     },
 
