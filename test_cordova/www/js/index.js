@@ -99,12 +99,32 @@ inAppBrowserbRef.addEventListener('loadstart', function() {
 
 // Add to index.js or the first page that loads with your app.
 
-receivedEvent: function(id) {
+
+    // Update DOM on a Received Event
+
+    receivedEvent: function (id) {
+
+        var parentElement = document.getElementById(id);
+
+        var listeningElement = parentElement.querySelector('.listening');
+
+        var receivedElement = parentElement.querySelector('.received');
+
+
+
+        listeningElement.setAttribute('style', 'display:none;');
+
+        receivedElement.setAttribute('style', 'display:block;');
+
+
+
+        console.log('Received Event: ' + id);
+
     //START ONESIGNAL CODE
     //Remove this method to stop OneSignal Debugging 
     //window.plugins.OneSignal.setLogLevel({logLevel: 6, visualLevel: 0});
     // Enable to debug issues.
-   window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+    window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
 
     var notificationOpenedCallback = function(jsonData) {
       console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
@@ -127,29 +147,6 @@ receivedEvent: function(id) {
       console.log("User accepted notifications: " + accepted);
     });
     //END ONESIGNAL CODE
-  },
-
-    // Update DOM on a Received Event
-
-    receivedEvent: function (id) {
-
-        var parentElement = document.getElementById(id);
-
-        var listeningElement = parentElement.querySelector('.listening');
-
-        var receivedElement = parentElement.querySelector('.received');
-
-
-
-        listeningElement.setAttribute('style', 'display:none;');
-
-        receivedElement.setAttribute('style', 'display:block;');
-
-
-
-        console.log('Received Event: ' + id);
-
-
     }
 
 };
