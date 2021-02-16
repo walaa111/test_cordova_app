@@ -90,9 +90,28 @@ ext {
     cdvPluginPostBuildExtras = []
 }
 
+
+// Fabric Cordova Plugin - Start Fabric Build Tools 
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+        maven { url 'https://maven.google.com' }
+    }
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.25.4'
+        classpath 'com.google.gms:google-services:+'
+    }
+}
+
+apply plugin: 'io.fabric'
+apply plugin: 'com.google.gms.google-services'
+// Fabric Cordova Plugin - End Fabric Build Tools
+
 // PLUGIN GRADLE EXTENSIONS START
-apply from: "../cordova-plugin-firebase/newcordova-build.gradle"
 apply from: "../cordova-android-play-services-gradle-release/newcordova-cordova-android-play-services-gradle-release.gradle"
+apply from: "../cordova-plugin-firebase/newcordova-build.gradle"
+apply from: "../cordova-support-google-services/newcordova-build.gradle"
+apply from: "../phonegap-plugin-multidex/newcordova-multidex.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras1 = file('build-extras.gradle').exists()

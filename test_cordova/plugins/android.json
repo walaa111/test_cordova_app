@@ -7,19 +7,7 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.realdealagency.newcordova"
-    },
     "cordova-admob": {
-      "PACKAGE_NAME": "com.realdealagency.newcordova"
-    },
-    "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.realdealagency.newcordova"
-    },
-    "cordova-plugin-androidx": {
-      "PACKAGE_NAME": "com.realdealagency.newcordova"
-    },
-    "cordova-plugin-firebase": {
       "PACKAGE_NAME": "com.realdealagency.newcordova"
     },
     "cordova-android-play-services-gradle-release": {
@@ -76,6 +64,18 @@
       "PLAY-SERVICES-WALLET": "17.0.0",
       "PLAY-SERVICES-WEARABLE": "17.0.0",
       "PACKAGE_NAME": "com.realdealagency.newcordova"
+    },
+    "cordova-plugin-androidx": {
+      "PACKAGE_NAME": "com.realdealagency.newcordova"
+    },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "com.realdealagency.newcordova"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.realdealagency.newcordova"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.realdealagency.newcordova"
     }
   },
   "dependent_plugins": {
@@ -83,6 +83,12 @@
       "PACKAGE_NAME": "com.realdealagency.newcordova"
     },
     "cordova-play-services-version-adapter": {
+      "PACKAGE_NAME": "com.realdealagency.newcordova"
+    },
+    "cordova-support-google-services": {
+      "PACKAGE_NAME": "com.realdealagency.newcordova"
+    },
+    "phonegap-plugin-multidex": {
       "PACKAGE_NAME": "com.realdealagency.newcordova"
     }
   }
