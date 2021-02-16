@@ -84,5 +84,5 @@ new cordova
         <variable name="PLAY-SERVICES-WALLET" value="17.0.0" />
         <variable name="PLAY-SERVICES-WEARABLE" value="17.0.0" />
     </plugin>
-    <plugin name="onesignal-cordova-plugin" spec="^2.0.3" />
+    <plugin name="onesignal-cordova-plugin" spec="^1.7.0" />
 </widget>
