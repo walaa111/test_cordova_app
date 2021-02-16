@@ -274,7 +274,7 @@ dependencies {
     compile "com.google.firebase:firebase-messaging:+"
     compile "com.google.firebase:firebase-config:+"
     compile "com.google.firebase:firebase-perf:+"
-    compile "com.onesignal:OneSignal:3.6.3"
+    compile "com.onesignal:OneSignal:3.8.3"
     // SUB-PROJECT DEPENDENCIES END
 }
 
