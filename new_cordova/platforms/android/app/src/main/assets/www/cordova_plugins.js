@@ -16,14 +16,6 @@ module.exports = [
       "window.admob",
       "window.tappx"
     ]
-  },
-  {
-    "id": "onesignal-cordova-plugin.OneSignal",
-    "file": "plugins/onesignal-cordova-plugin/www/OneSignal.js",
-    "pluginId": "onesignal-cordova-plugin",
-    "clobbers": [
-      "OneSignal"
-    ]
   }
 ];
 module.exports.metadata = 
@@ -32,8 +24,7 @@ module.exports.metadata =
   "cordova-plugin-whitelist": "1.3.4",
   "cordova-connectivity-monitor": "1.2.2",
   "cordova-play-services-version-adapter": "1.0.2",
-  "cordova-admob": "5.1.0",
-  "onesignal-cordova-plugin": "2.3.3"
+  "cordova-admob": "5.1.0"
 };
 // BOTTOM OF METADATA
 });

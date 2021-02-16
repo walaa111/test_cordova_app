@@ -27,7 +27,4 @@ new cordova
     <feature name="AdMobAds">
         <param name="android-package" value="com.appfeel.cordova.admob.AdMobAds" />
     </feature>
-    <feature name="OneSignalPush">
-        <param name="android-package" value="com.plugin.gcm.OneSignalPush" />
-    </feature>
 </widget>

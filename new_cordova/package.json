@@ -18,8 +18,7 @@
   "cordova": {
     "plugins": {
       "cordova-plugin-whitelist": {},
-      "cordova-admob": {},
-      "onesignal-cordova-plugin": {}
+      "cordova-admob": {}
     },
     "platforms": [
       "android"
@@ -29,7 +28,6 @@
     "cordova-admob": "^5.1.0",
     "cordova-android": "^7.1.4",
     "cordova-connectivity-monitor": "^1.2.2",
-    "cordova-play-services-version-adapter": "^1.1.0",
-    "onesignal-cordova-plugin": "^2.3.3"
+    "cordova-play-services-version-adapter": "^1.1.0"
   }
 }
