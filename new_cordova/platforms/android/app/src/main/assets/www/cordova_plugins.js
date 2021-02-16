@@ -25,6 +25,14 @@ module.exports = [
       "cordova.InAppBrowser.open",
       "window.open"
     ]
+  },
+  {
+    "id": "onesignal-cordova-plugin.OneSignal",
+    "file": "plugins/onesignal-cordova-plugin/www/OneSignal.js",
+    "pluginId": "onesignal-cordova-plugin",
+    "clobbers": [
+      "OneSignal"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -34,7 +42,8 @@ module.exports.metadata =
   "cordova-play-services-version-adapter": "1.0.2",
   "cordova-admob": "5.1.0",
   "cordova-plugin-whitelist": "1.3.4",
-  "cordova-plugin-inappbrowser": "1.7.2"
+  "cordova-plugin-inappbrowser": "1.7.2",
+  "onesignal-cordova-plugin": "2.3.3"
 };
 // BOTTOM OF METADATA
 });
