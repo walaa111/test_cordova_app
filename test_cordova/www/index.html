@@ -39,8 +39,8 @@
         <script>
 
 
-document.addEventListener("deviceready",onDeviceReady,false);
-    function onDeviceReady(){
+document.addEventListener("deviceready",notify,false);
+    function notify(){
         alert("yes");
 
        var push = PushNotification.init({ "android": {"senderID": "1031016695868"}}); //add your sender ID from Firebase Cloud Messenging
