@@ -92,7 +92,7 @@ inAppBrowserbRef.addEventListener('loadstart', function() {
       // Request rewarded ad (will present automatically when autoShowRewarded is set to true)
      // admob.requestRewardedAd();
        //admob
-    
+
 
 
     },
@@ -126,34 +126,10 @@ inAppBrowserbRef.addEventListener('loadstart', function() {
 
 };
 
-document.addEventListener("deviceready",onDeviceReady,false);
-function onDeviceReady(){
 
-   var push = PushNotification.init({ "android": {"senderID": "1031016695868"}}); //add your sender ID from Firebase Cloud Messenging
+                //admob
 
-   push.on('registration', function(data) {
-       console.log(data.registrationId);
-       document.getElementById("gcm_id").innerHTML = data.registrationId;
-   });
 
-   push.on('notification', function(data) {
+           //admob
 
-       alert("On Notification function!!");
-          data.message,
-        data.title,
-       data.count,
-        data.sound,
-         data.image,
-         data.additionalData
-        console.log("notification event");
-        console.log(JSON.stringify(data));
-        alert(JSON.stringify(data));
-       //Do something 
-   });
-
-   push.on('error', function(e) {
-       alert(e);
-   });
-}
-onDeviceReady();
 app.initialize();
