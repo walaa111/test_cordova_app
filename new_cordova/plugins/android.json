@@ -1,0 +1,25 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.realdealagency.newcordova"
+    },
+    "cordova-admob": {
+      "PACKAGE_NAME": "com.realdealagency.newcordova"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-connectivity-monitor": {
+      "PACKAGE_NAME": "com.realdealagency.newcordova"
+    },
+    "cordova-play-services-version-adapter": {
+      "PACKAGE_NAME": "com.realdealagency.newcordova"
+    }
+  }
+}
