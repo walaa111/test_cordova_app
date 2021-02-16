@@ -1,0 +1,5 @@
+D:\projects\drn2
+2 files needed to be upload on phonegap
+
+1-Certificates.p12
+2-Wildcard_Profile.mobileprovision
