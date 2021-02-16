@@ -24,6 +24,5 @@ new cordova
     </platform>
     <preference name="android-minSdkVersion" value="16" />
     <preference name="android-targetSdkVersion" value="27" />
-
- <plugin name="onesignal-cordova-plugin" source="npm" spec="2.3.3" />
+    <plugin name="onesignal-cordova-plugin" spec="^2.11.3" />
 </widget>
