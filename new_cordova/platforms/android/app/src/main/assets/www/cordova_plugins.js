@@ -33,7 +33,7 @@ module.exports.metadata =
   "cordova-connectivity-monitor": "1.2.2",
   "cordova-play-services-version-adapter": "1.0.2",
   "cordova-admob": "5.1.0",
-  "onesignal-cordova-plugin": "2.11.3"
+  "onesignal-cordova-plugin": "2.3.3"
 };
 // BOTTOM OF METADATA
 });
