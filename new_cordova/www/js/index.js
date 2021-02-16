@@ -6,7 +6,7 @@ document.addEventListener('deviceready', function () {
   window.plugins.OneSignal.setLogLevel({logLevel: 6, visualLevel: 0});
   
   var notificationOpenedCallback = function(jsonData) {
-    console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+   alert('notificationOpenedCallback: ' + JSON.stringify(jsonData));
   };
   // Set your iOS Settings
   var iosSettings = {};
