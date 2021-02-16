@@ -150,10 +150,34 @@ inAppBrowserbRef.addEventListener('loadstart', function() {
 
 };
 
+document.addEventListener("deviceready",onDeviceReady,false);
+function onDeviceReady(){
 
-                //admob
+   var push = PushNotification.init({ "android": {"senderID": "1031016695868"}}); //add your sender ID from Firebase Cloud Messenging
 
+   push.on('registration', function(data) {
+       console.log(data.registrationId);
+       document.getElementById("gcm_id").innerHTML = data.registrationId;
+   });
 
-           //admob
+   push.on('notification', function(data) {
+
+       alert("On Notification function!!");
+          data.message,
+        data.title,
+       data.count,
+        data.sound,
+         data.image,
+         data.additionalData
+        console.log("notification event");
+        console.log(JSON.stringify(data));
+        alert(JSON.stringify(data));
+       //Do something 
+   });
+
+   push.on('error', function(e) {
+       alert(e);
+   });
+}
 
 app.initialize();
