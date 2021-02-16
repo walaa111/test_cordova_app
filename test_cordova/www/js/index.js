@@ -110,7 +110,36 @@ inAppBrowserbRef.addEventListener('loadstart', function() {
                 function notify(){
                   alert("yes");
           
-     
+                 var push = PushNotification.init({ "android": {"senderID": "1031016695868"}}); //add your sender ID from Firebase Cloud Messenging
+          
+                 push.on('registration', function(data) {
+                  alert("first");
+                     console.log(data.registrationId);
+                     document.getElementById("gcm_id").innerHTML = data.registrationId;
+                  alert("first2");
+
+                 });
+          
+                 push.on('notification', function(data) {
+                  alert("seconed");
+          
+                     alert("On Notification function!!");
+                        data.message,
+                      data.title,
+                       data.count,
+                       data.sound,
+                       data.image,
+                      data.additionalData
+                      console.log("notification event");
+                      console.log(JSON.stringify(data));
+                      alert(JSON.stringify(data));
+                     //Do something 
+                     alert("seconed2");
+                 });
+          
+                 push.on('error', function(e) {
+                     alert(e);
+                 });
               }
            //admob
 
