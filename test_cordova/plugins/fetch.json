@@ -82,7 +82,7 @@
   "onesignal-cordova-plugin": {
     "source": {
       "type": "registry",
-      "id": "onesignal-cordova-plugin@2.0.3"
+      "id": "onesignal-cordova-plugin@1.13.1"
     },
     "is_top_level": true,
     "variables": {}

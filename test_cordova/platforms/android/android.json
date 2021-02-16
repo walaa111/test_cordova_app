@@ -85,20 +85,7 @@
               "count": 1
             }
           ],
-          "/manifest": [
-            {
-              "xml": "<uses-permission android:name=\"com.amazon.device.messaging.permission.RECEIVE\" />",
-              "count": 1
-            },
-            {
-              "xml": "<permission android:name=\"com.realdealagency.newcordova.permission.RECEIVE_ADM_MESSAGE\" android:protectionLevel=\"signature\" />",
-              "count": 1
-            },
-            {
-              "xml": "<uses-permission android:name=\"com.realdealagency.newcordova.permission.RECEIVE_ADM_MESSAGE\" />",
-              "count": 1
-            }
-          ]
+          "/manifest": []
         }
       }
     }
@@ -237,6 +224,6 @@
     "cordova-plugin-androidx": "3.0.0",
     "cordova-plugin-firebase": "2.0.5",
     "cordova-android-play-services-gradle-release": "4.0.0",
-    "onesignal-cordova-plugin": "2.0.3"
+    "onesignal-cordova-plugin": "1.13.1"
   }
 }
