@@ -1,8 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.realdealagency.newcordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="connectivity">
+        <param name="android-package" value="com.appfeel.cordova.connectivity.Connectivity" />
+    </feature>
+    <feature name="AdMobAds">
+        <param name="android-package" value="com.appfeel.cordova.admob.AdMobAds" />
+    </feature>
     <feature name="Whitelist">
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
+    </feature>
+    <feature name="OneSignalPush">
+        <param name="android-package" value="com.plugin.gcm.OneSignalPush" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
     <name>new cordova </name>
     <description>
@@ -21,13 +33,5 @@ new cordova
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
-    <feature name="connectivity">
-        <param name="android-package" value="com.appfeel.cordova.connectivity.Connectivity" />
-    </feature>
-    <feature name="AdMobAds">
-        <param name="android-package" value="com.appfeel.cordova.admob.AdMobAds" />
-    </feature>
-    <feature name="OneSignalPush">
-        <param name="android-package" value="com.plugin.gcm.OneSignalPush" />
-    </feature>
+    <preference name="android-minSdkVersion" value="16" />
 </widget>
