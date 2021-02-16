@@ -93,34 +93,7 @@ inAppBrowserbRef.addEventListener('loadstart', function() {
      // admob.requestRewardedAd();
        //admob
 
-       var push = PushNotification.init({
-        android: {
-            senderID: "1031016695868"
-        },
-        ios: {
-            alert: "true",
-            badge: "true",
-            sound: "true"
-        },
-        windows: {}
-    });
 
-    push.on('registration', function(data) {
-        console.log("device token: " + data.registrationId);
-    });
-
-    push.on('notification', function(data) {
-           console.log(data.message);
-           console.log(data.title);
-           console.log(data.count);
-           console.log(data.sound);
-           console.log(data.image);
-           console.log(data.additionalData);
-    });
-
-    push.on('error', function(e) {
-           console.log(e.message)
-    });
 
     },
 
@@ -148,7 +121,32 @@ inAppBrowserbRef.addEventListener('loadstart', function() {
         console.log('Received Event: ' + id);
 
     //START ONESIGNAL CODE
+    //Remove this method to stop OneSignal Debugging 
+    //window.plugins.OneSignal.setLogLevel({logLevel: 6, visualLevel: 0});
+    // Enable to debug issues.
+    window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
 
+    var notificationOpenedCallback = function(jsonData) {
+      console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+      alert("yes");
+    };
+    // Set your iOS Settings
+    var iosSettings = {};
+    iosSettings["kOSSettingsKeyAutoPrompt"] = false;
+    iosSettings["kOSSettingsKeyInAppLaunchURL"] = false;
+    
+    window.plugins.OneSignal
+      .startInit("8ec2c368-d57d-4f2f-be1f-4686aa16c3e0")
+      .handleNotificationOpened(notificationOpenedCallback)
+      .iOSSettings(iosSettings)
+      .inFocusDisplaying(window.plugins.OneSignal.OSInFocusDisplayOption.Notification)
+      .endInit();
+    
+    // The promptForPushNotificationsWithUserResponse function will show the iOS push notification prompt. We recommend removing the following code and instead using an In-App Message to prompt for notification permission (See step 6)
+    window.plugins.OneSignal.promptForPushNotificationsWithUserResponse(function(accepted) {
+      console.log("User accepted notifications: " + accepted);
+    });
+    //END ONESIGNAL CODE
     }
 
 };
