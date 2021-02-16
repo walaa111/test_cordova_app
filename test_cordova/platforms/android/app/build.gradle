@@ -93,7 +93,6 @@ ext {
 // PLUGIN GRADLE EXTENSIONS START
 apply from: "../cordova-plugin-firebase/newcordova-build.gradle"
 apply from: "../cordova-android-play-services-gradle-release/newcordova-cordova-android-play-services-gradle-release.gradle"
-apply from: "../onesignal-cordova-plugin/newcordova-build-extras-onesignal.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras1 = file('build-extras.gradle').exists()
@@ -274,7 +273,6 @@ dependencies {
     compile "com.google.firebase:firebase-messaging:+"
     compile "com.google.firebase:firebase-config:+"
     compile "com.google.firebase:firebase-perf:+"
-    compile "com.onesignal:OneSignal:3.8.3"
     // SUB-PROJECT DEPENDENCIES END
 }
 

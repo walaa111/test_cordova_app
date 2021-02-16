@@ -76,9 +76,6 @@
       "PLAY-SERVICES-WALLET": "17.0.0",
       "PLAY-SERVICES-WEARABLE": "17.0.0",
       "PACKAGE_NAME": "com.realdealagency.newcordova"
-    },
-    "onesignal-cordova-plugin": {
-      "PACKAGE_NAME": "com.realdealagency.newcordova"
     }
   },
   "dependent_plugins": {
