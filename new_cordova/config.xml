@@ -23,8 +23,5 @@ new cordova
         <allow-intent href="itms-apps:*" />
     </platform>
     <preference name="android-minSdkVersion" value="16" />
-    <preference name="android-targetSdkVersion" value="27" />
-    <engine name="android" spec="~7.1.4" />
-    <plugin name="cordova-admob" spec="^5.1.0" />
     <plugin name="onesignal-cordova-plugin" spec="^2.3.3" />
 </widget>
