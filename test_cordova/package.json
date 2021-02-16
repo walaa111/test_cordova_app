@@ -95,6 +95,6 @@
     "cordova-plugin-firebase": "2.0.5",
     "cordova-plugin-firebase-lib": "4.1.0",
     "cordova-plugin-inappbrowser": "^4.1.0",
-    "onesignal-cordova-plugin": "^2.3.2"
+    "onesignal-cordova-plugin": "^2.0.3"
   }
 }
