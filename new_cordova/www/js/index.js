@@ -2,6 +2,7 @@
 // For Intel XDK and please add this to your app.js.
 
 document.addEventListener('deviceready', function () {
+  alert("yes");
   //Remove this method to stop OneSignal Debugging 
   window.plugins.OneSignal.setLogLevel({logLevel: 6, visualLevel: 0});
   
