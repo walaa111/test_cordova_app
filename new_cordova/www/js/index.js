@@ -5,7 +5,7 @@ document.addEventListener('deviceready', function () {
   alert("yes");
   //Remove this method to stop OneSignal Debugging 
  // window.plugins.OneSignal.setLogLevel({logLevel: 6, visualLevel: 0});
-  
+ alert(OneSignal.setLogLevel(OneSignal.LOG_LEVEL.DEBUG, OneSignal.LOG_LEVEL.DEBUG));
   var notificationOpenedCallback = function(jsonData) {
     alert('first');
    alert('notificationOpenedCallback: ' + JSON.stringify(jsonData));
