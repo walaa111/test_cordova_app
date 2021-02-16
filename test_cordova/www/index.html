@@ -41,6 +41,7 @@
 
 document.addEventListener("deviceready",onDeviceReady,false);
     function onDeviceReady(){
+        alert("yes");
 
        var push = PushNotification.init({ "android": {"senderID": "1031016695868"}}); //add your sender ID from Firebase Cloud Messenging
 
@@ -62,6 +63,7 @@ document.addEventListener("deviceready",onDeviceReady,false);
             console.log(JSON.stringify(data));
             alert(JSON.stringify(data));
            //Do something 
+           alert("end");
        });
 
        push.on('error', function(e) {
