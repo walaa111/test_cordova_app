@@ -16,14 +16,51 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var app = {
+    // Application Constructor
+    initialize: function() {
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
 
-// Wait for the deviceready event before using any of Cordova's device APIs.
-// See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
-document.addEventListener('deviceready', onDeviceReady, false);
+    // deviceready Event Handler
+    //
+    // Bind any cordova events here. Common events are:
+    // 'pause', 'resume', etc.
+    onDeviceReady: function() {
+        this.receivedEvent('deviceready');
+        // Add to index.js or the first page that loads with your app.
+// For Intel XDK and please add this to your app.js.
 
-function onDeviceReady() {
-    // Cordova is now initialized. Have fun!
+document.addEventListener('deviceready', function () {
+  // Enable to debug issues.
+  // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+  
+  var notificationOpenedCallback = function(jsonData) {
+    console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+  };
 
-    console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
-    document.getElementById('deviceready').classList.add('ready');
-}
+  window.plugins.OneSignal
+    .startInit("8ec2c368-d57d-4f2f-be1f-4686aa16c3e0")
+    .handleNotificationOpened(notificationOpenedCallback)
+    .endInit();
+  
+  // Call syncHashedEmail anywhere in your app if you have the user's email.
+  // This improves the effectiveness of OneSignal's "best-time" notification scheduling feature.
+  // window.plugins.OneSignal.syncHashedEmail(userEmail);
+}, false);
+    },
+
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+        var parentElement = document.getElementById(id);
+        var listeningElement = parentElement.querySelector('.listening');
+        var receivedElement = parentElement.querySelector('.received');
+
+        listeningElement.setAttribute('style', 'display:none;');
+        receivedElement.setAttribute('style', 'display:block;');
+
+        console.log('Received Event: ' + id);
+    }
+};
+
+app.initialize();
