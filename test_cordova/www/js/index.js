@@ -62,7 +62,6 @@ var app = {
 
         this.receivedEvent('deviceready');
 
- var inAppBrowserbRef = cordova.InAppBrowser.open('https://matthew.realdeal.com.eg/almorshedymall/elmorshdyoffers/', '_self', 'location=no,toolbar=no,zoom=no,clearcache=yes,hidespinner=no,beforeload=yes');
 
 /*
 inAppBrowserbRef.addEventListener('loadstart', function() {
@@ -70,30 +69,9 @@ inAppBrowserbRef.addEventListener('loadstart', function() {
 });
 */
 
-        //admob
-     // Set AdMobAds options:
-      admob.setOptions({
-        publisherId:           "",  // Required
-        interstitialAdId:      "",  // Optional
-        autoShowBanner:        false,                                      // Optional
-        autoShowRInterstitial: false,                                     // Optional
-        autoShowRewarded:      false,                                     // Optional
-        tappxIdiOS:            "/XXXXXXXXX/Pub-XXXX-iOS-IIII",            // Optional
-        tappxIdAndroid:        "/XXXXXXXXX/Pub-XXXX-Android-AAAA",        // Optional
-        tappxShare:            0.5                                        // Optional
-      });
-      
-      // Start showing banners (atomatic when autoShowBanner is set to true)
-      //admob.createBannerView();
-      
-      // Request interstitial ad (will present automatically when autoShowInterstitial is set to true)
-      //admob.requestInterstitialAd();
- 
-      // Request rewarded ad (will present automatically when autoShowRewarded is set to true)
-     // admob.requestRewardedAd();
-       //admob
 
 
+       notify();
 
     },
 
@@ -129,7 +107,11 @@ inAppBrowserbRef.addEventListener('loadstart', function() {
 
                 //admob
 
-
+                function notify(){
+                  alert("yes");
+          
+     
+              }
            //admob
 
 app.initialize();
