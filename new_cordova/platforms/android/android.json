@@ -121,9 +121,6 @@
     "cordova-plugin-firebase-lib": {
       "PACKAGE_NAME": "com.realdealagency.newcordova"
     },
-    "cordova-plugin-androidx": {
-      "PACKAGE_NAME": "com.realdealagency.newcordova"
-    },
     "cordova-android-play-services-gradle-release": {
       "PLAY-SERVICES-ADS": "18.0.0",
       "PLAY-SERVICES-ADS-IDENTIFIER": "17.0.0",
@@ -264,7 +261,6 @@
     "cordova-plugin-inappbrowser": "1.7.2",
     "onesignal-cordova-plugin": "2.3.3",
     "cordova-plugin-firebase-lib": "3.3.0",
-    "cordova-plugin-androidx": "3.0.0",
     "cordova-android-play-services-gradle-release": "4.0.0",
     "cordova-android-firebase-gradle-release": "4.0.0"
   }
