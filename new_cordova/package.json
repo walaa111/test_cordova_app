@@ -107,7 +107,8 @@
         "FIREBASE-PERF": "18.0.0",
         "FIREBASE-DATABASE": "18.0.0",
         "FIREBASE-CONFIG": "18.0.0"
-      }
+      },
+      "cordova-plugin-fcm": {}
     },
     "platforms": []
   },
@@ -119,6 +120,7 @@
     "cordova-play-services-version-adapter": "^1.1.0",
     "cordova-plugin-androidx": "^3.0.0",
     "cordova-plugin-androidx-adapter": "^1.1.3",
+    "cordova-plugin-fcm": "^2.1.2",
     "cordova-plugin-firebase-lib": "3.3.0",
     "cordova-plugin-inappbrowser": "^1.7.2",
     "cordova-plugin-whitelist": "^1.3.3",
