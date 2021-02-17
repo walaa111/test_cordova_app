@@ -33,6 +33,14 @@ module.exports = [
     "clobbers": [
       "OneSignal"
     ]
+  },
+  {
+    "id": "cordova-plugin-firebase-lib.FirebasePlugin",
+    "file": "plugins/cordova-plugin-firebase-lib/www/firebase.js",
+    "pluginId": "cordova-plugin-firebase-lib",
+    "clobbers": [
+      "FirebasePlugin"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -43,7 +51,9 @@ module.exports.metadata =
   "cordova-admob": "5.1.0",
   "cordova-plugin-whitelist": "1.3.4",
   "cordova-plugin-inappbrowser": "1.7.2",
-  "onesignal-cordova-plugin": "2.3.3"
+  "onesignal-cordova-plugin": "2.3.3",
+  "cordova-plugin-firebase-lib": "3.3.0",
+  "cordova-plugin-androidx": "3.0.0"
 };
 // BOTTOM OF METADATA
 });
