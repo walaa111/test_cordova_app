@@ -80,5 +80,15 @@
     "variables": {
       "PLAY-SERVICES-LOCATION": "17.0.0"
     }
+  },
+  "cordova-android-firebase-gradle-release": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-android-firebase-gradle-release"
+    },
+    "is_top_level": true,
+    "variables": {
+      "FIREBASE-CORE": "17.0.0"
+    }
   }
 }

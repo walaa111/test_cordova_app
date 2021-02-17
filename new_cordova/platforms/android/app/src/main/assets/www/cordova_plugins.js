@@ -54,7 +54,8 @@ module.exports.metadata =
   "onesignal-cordova-plugin": "2.3.3",
   "cordova-plugin-firebase-lib": "3.3.0",
   "cordova-plugin-androidx": "3.0.0",
-  "cordova-android-play-services-gradle-release": "4.0.0"
+  "cordova-android-play-services-gradle-release": "4.0.0",
+  "cordova-android-firebase-gradle-release": "4.0.0"
 };
 // BOTTOM OF METADATA
 });

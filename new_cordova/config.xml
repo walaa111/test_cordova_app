@@ -84,4 +84,34 @@ new cordova
         <variable name="PLAY-SERVICES-WALLET" value="17.0.0" />
         <variable name="PLAY-SERVICES-WEARABLE" value="17.0.0" />
     </plugin>
+    <plugin name="cordova-android-firebase-gradle-release" spec="^4.0.0">
+        <variable name="FIREBASE-CORE" value="17.0.0" />
+        <variable name="FIREBASE-ADS" value="18.0.0" />
+        <variable name="FIREBASE-ANALYTICS" value="17.0.0" />
+        <variable name="FIREBASE-APPINDEXING" value="19.0.0" />
+        <variable name="FIREBASE-AUTH" value="18.0.0" />
+        <variable name="FIREBASE-FIRESTORE" value="20.0.0" />
+        <variable name="FIREBASE-FUNCTIONS" value="18.0.0" />
+        <variable name="FIREBASE-MESSAGING" value="19.0.0" />
+        <variable name="FIREBASE-STORAGE" value="18.0.0" />
+        <variable name="FIREBASE-CRASH" value="16.2.1" />
+        <variable name="CRASHLYTICS" value="2.10.1" />
+        <variable name="FIREBASE-DYNAMIC-LINKS" value="18.0.0" />
+        <variable name="FIREBASE-INVITES" value="17.0.0" />
+        <variable name="FIREBASE-INAPPMESSAGING" value="18.0.1" />
+        <variable name="FIREBASE-INAPPMESSAGING-DISPLAY" value="18.0.1" />
+        <variable name="FIREBASE-ML-VISION" value="21.0.0" />
+        <variable name="FIREBASE-ML-VISION-IMAGE-LABEL-MODEL" value="18.0.0" />
+        <variable name="FIREBASE-ML-VISION-FACE-MODEL" value="18.0.0" />
+        <variable name="FIREBASE-ML-VISION-OBJECT-DETECTION-MODEL" value="17.0.0" />
+        <variable name="FIREBASE-ML-NATURAL-LANGUAGE" value="20.0.0" />
+        <variable name="FIREBASE-ML-NATURAL-LANGUAGE-LANGUAGE-ID-MODEL" value="20.0.0" />
+        <variable name="FIREBASE-ML-NATURAL-LANGUAGE-TRANSLATE-MODEL" value="20.0.0" />
+        <variable name="FIREBASE-ML-NATURAL-LANGUAGE-SMART-REPLY-MODEL" value="20.0.0" />
+        <variable name="FIREBASE-ML-MODEL-INTERPRETER" value="20.0.0" />
+        <variable name="FIREBASE-ML-VISION-AUTOML" value="17.0.0" />
+        <variable name="FIREBASE-PERF" value="18.0.0" />
+        <variable name="FIREBASE-DATABASE" value="18.0.0" />
+        <variable name="FIREBASE-CONFIG" value="18.0.0" />
+    </plugin>
 </widget>
