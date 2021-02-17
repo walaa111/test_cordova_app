@@ -109,13 +109,10 @@
         "FIREBASE-CONFIG": "18.0.0"
       }
     },
-    "platforms": [
-      "android"
-    ]
+    "platforms": []
   },
   "dependencies": {
     "cordova-admob": "^5.1.0",
-    "cordova-android": "^7.1.4",
     "cordova-android-firebase-gradle-release": "^4.0.0",
     "cordova-android-play-services-gradle-release": "^4.0.0",
     "cordova-connectivity-monitor": "^1.2.2",
