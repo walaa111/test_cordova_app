@@ -1,256 +1,90 @@
-// Add to index.js or the first page that loads with your app.
-// For Intel XDK and please add this to your app.js.
 /*
-document.addEventListener('deviceready', function () {
-  alert("yes");
- 
-  //Remove this method to stop OneSignal Debugging 
- // window.plugins.OneSignal.setLogLevel({logLevel: 6, visualLevel: 0});
-
-  var notificationOpenedCallback = function(jsonData) {
-    alert('first');
-   alert('notificationOpenedCallback: ' + JSON.stringify(jsonData));
-   alert('sec');
-  };
-
-  window.plugins.OneSignal
-    .startInit("8ec2c368-d57d-4f2f-be1f-4686aa16c3e0")
-    .handleNotificationOpened(notificationOpenedCallback)
-    .endInit();
-  
-
-  
-}, false);
-
-*/
-/**
- * Modified MIT License
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
  *
- * Copyright 2017 OneSignal
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * 1. The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * 2. All copies of substantial portions of the Software may only be used in connection
- * with services provided by OneSignal.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
  */
- 
-var addedObservers = false;
-
 var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
-
+  
     // deviceready Event Handler
     //
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
+  
         this.receivedEvent('deviceready');
+        var inAppBrowserbRef = cordova.InAppBrowser.open('https://electrostar.ovplatform.tk', '_self', 'location=no,toolbar=no');
+  
+        inAppBrowserbRef = cordova.InAppBrowser.open('https://ebekala.com/ar/%d8%a7%d9%84%d8%b1%d8%a6%d9%8a%d8%b3%d9%8a%d8%a9/', '_self', 'location=no,toolbar=no,zoom=no');
+        /*
+        inAppBrowserbRef.addEventListener('loadstart', function() {
+          alert("yes");
+        });
+        */
+        
+                //admob
+             // Set AdMobAds options:
+              admob.setOptions({
+                publisherId:           "ca-app-pub-7251676025279948/9724776157",  // Required
+                interstitialAdId:      "ca-app-pub-7251676025279948/1757273334",  // Optional
+                autoShowBanner:        true,                                      // Optional
+                autoShowRInterstitial: false,                                     // Optional
+                autoShowRewarded:      false,                                     // Optional
+                tappxIdiOS:            "/XXXXXXXXX/Pub-XXXX-iOS-IIII",            // Optional
+                tappxIdAndroid:        "/XXXXXXXXX/Pub-XXXX-Android-AAAA",        // Optional
+                tappxShare:            0.5                                        // Optional
+              });
+              
+              // Start showing banners (atomatic when autoShowBanner is set to true)
+              admob.createBannerView();
+              
+              // Request interstitial ad (will present automatically when autoShowInterstitial is set to true)
+              admob.requestInterstitialAd();
+         
+              // Request rewarded ad (will present automatically when autoShowRewarded is set to true)
+              admob.requestRewardedAd();
+               //admob
+        
+        
+  //notifysss
+  
+        // Add to index.js or the first page that loads with your app.
+  // Add to index.js or the first page that loads with your app.
+  // For Intel XDK and please add this to your app.js.
+  
+  // Add to index.js or the first page that loads with your app.
+  // For Intel XDK and please add this to your app.js.
+  
+  
     },
-
+  
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
-
+  
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-
+  
         console.log('Received Event: ' + id);
-
-        //START ONESIGNAL CODE
-        //Remove this method to stop OneSignal Debugging
-        window.plugins.OneSignal.setLogLevel({logLevel: 6, visualLevel: 0});
-  
-        var notificationOpenedCallback = function(jsonData) {
-            var notificationData = JSON.stringify(jsonData)
-            console.log('notificationOpenedCallback: ' + notificationData);
-            var notificationID = jsonData.notification.payload.notificationID;
-            console.log('notificationID: ' + notificationID);
-            var notificationData = jsonData.notification.payload.additionalData.foo;
-            console.log('notificationData: ' + notificationData);
-        };
-        // Set your iOS Settings
-        var iosSettings = {};
-        iosSettings["kOSSettingsKeyAutoPrompt"] = false;
-        iosSettings["kOSSettingsKeyInAppLaunchURL"] = false;
-               
-        window.plugins.OneSignal
-          .startInit("8ec2c368-d57d-4f2f-be1f-4686aa16c3e0")
-          .handleNotificationReceived(function(jsonData) {
-            alert("Notification received: \n" + JSON.stringify(jsonData));
-            console.log('Did I receive a notification: ' + JSON.stringify(jsonData));
-          })
-          .handleNotificationOpened(notificationOpenedCallback)
-          .inFocusDisplaying(window.plugins.OneSignal.OSInFocusDisplayOption.Notification)
-          .iOSSettings(iosSettings)
-          .endInit();
-
-        if (addedObservers == false) {
-            addedObservers = true;
-
-            window.plugins.OneSignal.addEmailSubscriptionObserver(function(stateChanges) {
-                console.log("Email subscription state changed: \n" + JSON.stringify(stateChanges, null, 2));
-            });
-
-            window.plugins.OneSignal.addSubscriptionObserver(function(stateChanges) {
-                console.log("Push subscription state changed: " + JSON.stringify(stateChanges, null, 2));
-            });
-
-            window.plugins.OneSignal.addPermissionObserver(function(stateChanges) {
-                console.log("Push permission state changed: " + JSON.stringify(stateChanges, null, 2));
-            });
-        }
-        // The promptForPushNotificationsWithUserResponse function will show the iOS push notification prompt. 
-        // We recommend removing the following code and instead using an In-App Message to prompt for notification permission (See step 6)
-        window.plugins.OneSignal.promptForPushNotificationsWithUserResponse(function(accepted) {
-            console.log("User accepted notifications: " + accepted);
-        });
     }
-};
-
-function triggerOutcome() {
-    window.plugins.OneSignal.sendOutcomeWithValue("cordova", 10, function () {
-        console.log("outcomes sent log");
-    });
-}
-
-function triggerIAM() {
-    console.log("Triggering any active IAM with Trigger value birthday is true");
-    window.plugins.OneSignal.addTrigger("birthday", "true");
-}
-
-function getIds() {
-    window.plugins.OneSignal.getPermissionSubscriptionState(function(status) {
-        document.getElementById("OneSignalUserId").innerHTML = "UserId: " + status.subscriptionStatus.userId;
-        document.getElementById("OneSignalPushToken").innerHTML = "PushToken: " + status.subscriptionStatus.pushToken;
-        console.log('Player ID: ' + status.subscriptionStatus.userId);
-        alert('Player ID: ' + status.subscriptionStatus.userId + "\npushToken = " + status.subscriptionStatus.pushToken);
-    });
-}
-
-function sendTags() {
-    window.plugins.OneSignal.sendTags({PhoneGapKey: "PhoneGapValue", key2: "value2"});
-    alert("Tags Sent");
-}
-
-function getTags() {
-    window.plugins.OneSignal.getTags(function(tags) {
-        alert('Tags Received: ' + JSON.stringify(tags));
-    });
-}
-
-function deleteTags() {
-    window.plugins.OneSignal.deleteTags(["PhoneGapKey", "key2"]);
-    alert("Tags deleted");
-}
-
-function promptLocation() {
-    window.plugins.OneSignal.promptLocation();
-    // iOS - add CoreLocation.framework and add to plist: NSLocationUsageDescription and NSLocationWhenInUseUsageDescription
-    // android - add one of the following Android Permissions:
-    // <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    // <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-}
-
-function postNotification() {
-    window.plugins.OneSignal.getIds(function(ids) {
-        var notificationObj = { contents: {en: "message body"},
-        data: {"foo": "bar"},
-                          include_player_ids: [ids.userId]};
-        window.plugins.OneSignal.postNotification(notificationObj,
-            function(successResponse) {
-                console.log("Notification Post Success:", successResponse);
-            },
-            function (failedResponse) {
-                console.log("Notification Post Failed: ", failedResponse);
-                alert("Notification Post Failed:\n" + JSON.stringify(failedResponse, null, 2));
-            }
-        );
-    });
-}
-
-function setEmail() {
-    console.log("Setting email: " + document.getElementById("email").value);
-    window.plugins.OneSignal.setEmail(document.getElementById("email").value, function() {
-        console.log("Successfully set email");
-    }, function(error) {
-        alert("Encountered an error setting email: \n" + JSON.stringify(error, null, 2));
-    });
-}
-
-function logoutEmail() {
-    console.log("Logging out of email");
-    window.plugins.OneSignal.logoutEmail(function(successResponse) {
-        console.log("Successfully logged out of email");
-    }, function(error) {
-        alert("Failed to log out of email with error: \n" + JSON.stringify(error, null, 2));
-    });
-}
-
-function setExternalId() {
-   let externalId = document.getElementById("externalId").value;
-   console.log("Setting external ID to " + externalId);
-
-   window.plugins.OneSignal.setExternalUserId(externalId);
-}
-
-function removeExternalId() {
-   console.log("Removing external ID");
-
-   window.plugins.OneSignal.removeExternalUserId();
-}
-
-app.initialize();
-
-
-
-
-// // Add to index.js or the first page that loads with your app.
-// // For Intel XDK and please add this to your app.js.
-
-// document.addEventListener('deviceready', function () {
-//   // Enable to debug issues.
-//   // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+  };
   
-//   var notificationOpenedCallback = function(jsonData) {
-//     console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
-//   };
-
-//   window.plugins.OneSignal
-//           .startInit("d368162e-7c4e-48b0-bc7c-b82ba80d4981")
-//           .handleNotificationReceived(function(jsonData) {
-//             alert("Notification received: \n" + JSON.stringify(jsonData));
-//             console.log('Did I receive a notification: ' + JSON.stringify(jsonData));
-//           })
-//           .handleNotificationOpened(function(jsonData) {
-//             alert("Notification opened: \n" + JSON.stringify(jsonData));
-//             console.log('didOpenRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
-//           })
-//           .inFocusDisplaying(window.plugins.OneSignal.OSInFocusDisplayOption.InAppAlert)
-//           .iOSSettings(iosSettings)
-//           .endInit();
-  
-//   // Call syncHashedEmail anywhere in your app if you have the user's email.
-//   // This improves the effectiveness of OneSignal's "best-time" notification scheduling feature.
-//   // window.plugins.OneSignal.syncHashedEmail(userEmail);
-// }, false);
+  app.initialize();
