@@ -12,6 +12,9 @@
     },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.realdealagency.newcordova"
+    },
+    "cordova-support-google-services": {
+      "PACKAGE_NAME": "com.realdealagency.newcordova"
     }
   },
   "dependent_plugins": {}
