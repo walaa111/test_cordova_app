@@ -7,10 +7,10 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-fcm-with-dependecy-updated": {
+  "cordova-plugin-fcm": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-fcm-with-dependecy-updated@^7.8.0"
+      "id": "cordova-plugin-fcm"
     },
     "is_top_level": true,
     "variables": {}
