@@ -22,7 +22,7 @@ module.exports.metadata =
 {
   "cordova-plugin-fcm": "2.1.2",
   "cordova-plugin-whitelist": "1.3.4",
-  "onesignal-cordova-plugin": "2.11.3"
+  "onesignal-cordova-plugin": "2.3.3"
 };
 // BOTTOM OF METADATA
 });
