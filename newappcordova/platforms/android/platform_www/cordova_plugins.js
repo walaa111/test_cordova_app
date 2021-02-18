@@ -14,7 +14,8 @@ module.exports.metadata =
 {
   "cordova-plugin-fcm": "2.1.2",
   "cordova-plugin-whitelist": "1.3.4",
-  "cordova-support-google-services": "1.4.1"
+  "cordova-support-google-services": "1.4.1",
+  "cordova-plugin-fcm-config": "1.0.0"
 };
 // BOTTOM OF METADATA
 });
