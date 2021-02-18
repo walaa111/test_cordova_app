@@ -14,13 +14,5 @@
     },
     "is_top_level": true,
     "variables": {}
-  },
-  "cordova-plugin-fcm-config": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-fcm-config"
-    },
-    "is_top_level": true,
-    "variables": {}
   }
 }

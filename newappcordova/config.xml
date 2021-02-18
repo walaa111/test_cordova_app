@@ -26,5 +26,4 @@
     </platform>
     <plugin name="cordova-plugin-fcm" spec="^2.1.2" />
     <engine name="android" spec="~7.1.4" />
-    <plugin name="cordova-plugin-fcm-config" spec="^1.0.0" />
 </widget>
